@@ -1,5 +1,5 @@
 const sheetID = "1CNIWfNKE-of46T1-B8YalUG_Qe2vJOKdYO8J62MhyW4";
-const sheetName = "wheeldata";  // シート名が小文字ならこのまま
+const sheetName = "wheeldata";
 const url = `https://opensheet.elk.sh/${sheetID}/${sheetName}`;
 
 const container = document.getElementById("wheel-container");
@@ -20,6 +20,6 @@ fetch(url)
     });
   })
   .catch(err => {
-    console.error("読み込みエラー:", err);
+    console.error("データ読み込みエラー:", err);
     container.innerHTML = "<p>データの読み込みに失敗しました。</p>";
   });
