@@ -7,6 +7,7 @@ const container = document.getElementById("wheel-container");
 fetch(url)
   .then((res) => res.json())
   .then((data) => {
+    console.log(data); // ← 追加して確認
     data.forEach((item) => {
       const card = document.createElement("div");
       card.className = "wheel-card";
