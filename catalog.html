@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>ホイールカタログ</title>
+  <style>
+    body { font-family: sans-serif; background: #f9f9ff; margin: 0; }
+    h1 { text-align: center; background-color: #6c63ff; color: white; padding: 1em; margin: 0; }
+    .filters { text-align: center; margin: 1em; }
+    .catalog { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1em; padding: 1em; }
+    .card { background: white; border-radius: 10px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); overflow: hidden; }
+    .card img { width: 100%; height: 180px; object-fit: cover; }
+    .card p { padding: 0.5em; margin: 0; text-align: center; }
+  </style>
+</head>
+<body>
+  <h1>ホイールカタログ</h1>
+  <div class="filters">
+    <select id="typeFilter">
+      <option value="">すべての種類</option>
+      <option value="Offroad">Offroad</option>
+      <option value="Sport">Sport</option>
+      <!-- 種類を追加 -->
+    </select>
+    <select id="modFilter">
+      <option value="">MOD/Vanilla</option>
+      <option value="MOD">MOD</option>
+      <option value="Vanilla">Vanilla</option>
+    </select>
+  </div>
+
+  <div class="catalog" id="catalog"></div>
+
+  <script>
+    const data = [
+      {
+        name: "SpeedWheel-X",
+        type: "Offroad",
+        category: "MOD",
+        image: "https://drive.google.com/uc?export=view&id=XXXXXX"
+      },
+      {
+        name: "RoadKing",
+        type: "Sport",
+        category: "Vanilla",
+        image: "https://drive.google.com/uc?export=view&id=YYYYYY"
+      }
+    ];
+
+    const catalog = document.getElementById("catalog");
+    const typeFilter = document.getElementById("typeFilter");
+    const modFilter = document.getElementById("modFilter");
+
+    function displayCatalog(items) {
+      catalog.innerHTML = "";
+      items.forEach(item => {
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `<img src="${item.image}"><p>${item.name}</p>`;
+        catalog.appendChild(card);
+      });
+    }
+
+    function filterCatalog() {
+      const type = typeFilter.value;
+      const mod = modFilter.value;
+      const filtered = data.filter(item =>
+        (type === "" || item.type === type) &&
+        (mod === "" || item.category === mod)
+      );
+      displayCatalog(filtered);
+    }
+
+    typeFilter.addEventListener("change", filterCatalog);
+    modFilter.addEventListener("change", filterCatalog);
+
+    displayCatalog(data); // 初期表示
+  </script>
+</body>
+</html>
