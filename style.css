@@ -1,6 +1,7 @@
 body {
-  font-family: sans-serif;
-  background: #f3f0fa;
+  font-family: Arial, sans-serif;
+  background-color: #f9f7fd;
+  color: #3a1d72;
   margin: 0;
   padding: 20px;
 }
@@ -13,19 +14,26 @@ header {
 #wheel-container.grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 16px;
+  gap: 15px;
 }
 
 .wheel-card {
-  background: white;
-  border-radius: 12px;
-  padding: 12px;
-  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgb(58 29 114 / 0.2);
   text-align: center;
 }
 
 .wheel-card img {
-  width: 100%;
+  max-width: 100%;
   height: auto;
-  border-radius: 8px;
+  border-radius: 6px;
+}
+
+.wheel-card h3 {
+  margin: 10px 0 0 0;
+  font-size: 1.1rem;
+  color: #5e3fa3;
 }
