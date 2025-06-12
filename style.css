@@ -1,0 +1,31 @@
+body {
+  font-family: sans-serif;
+  background: #f3f0fa;
+  margin: 0;
+  padding: 20px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#wheel-container.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+}
+
+.wheel-card {
+  background: white;
+  border-radius: 12px;
+  padding: 12px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.1);
+  text-align: center;
+}
+
+.wheel-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
