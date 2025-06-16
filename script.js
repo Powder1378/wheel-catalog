@@ -98,30 +98,6 @@ searchInput.addEventListener("input", applyFilters);
 typeFilters.forEach(cb => cb.addEventListener("change", applyFilters));
 sourceFilters.forEach(cb => cb.addEventListener("change", applyFilters));
 
-// ハンバーガーメニュー操作
-const menuToggle = document.getElementById("menu-toggle");
-const menu = document.getElementById("menu");
-
-menuToggle.addEventListener("click", (e) => {
-  e.stopPropagation();
-  menu.classList.toggle("active");
-});
-
-// メニュー外クリックで閉じる
-document.addEventListener("click", (e) => {
-  if (menu.classList.contains("active") &&
-      !menu.contains(e.target) &&
-      !menuToggle.contains(e.target)) {
-    menu.classList.remove("active");
-  }
-});
-
-// ESCキーで閉じる
-document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape") {
-    menu.classList.remove("active");
-  }
-});
 
 // 初期表示
 applyFilters();
