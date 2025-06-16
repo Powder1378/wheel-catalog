@@ -120,3 +120,24 @@ h1 {
 .site-footer a:hover {
   text-decoration: underline;
 }
+
+.filter-buttons {
+  margin-top: 0.5rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.filter-buttons button {
+  background-color: #6a1b9a;
+  color: white;
+  border: none;
+  padding: 0.4rem 0.8rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.filter-buttons button:hover {
+  background-color: #8e24aa;
+}
