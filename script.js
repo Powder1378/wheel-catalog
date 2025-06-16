@@ -38,14 +38,15 @@ for (let i = 51; i <= 113; i++) {
 
 // SUV
 
-// 要素の取得
+
+// 要素取得
 const container = document.getElementById("wheel-container");
 const searchInput = document.getElementById("search");
 const typeFilters = document.querySelectorAll(".type-filter");
 const sourceFilters = document.querySelectorAll(".source-filter");
 const filterSummary = document.getElementById("filter-summary");
 
-// ホイールカードの描画
+// データ表示
 function displayData(items) {
   container.innerHTML = "";
 
@@ -69,7 +70,7 @@ function displayData(items) {
   });
 }
 
-// フィルタの適用
+// フィルター適用
 function applyFilters() {
   const keyword = searchInput.value.toLowerCase();
 
@@ -89,11 +90,10 @@ function applyFilters() {
   });
 
   filterSummary.textContent = `絞り込み結果：${filtered.length} 件`;
-
   displayData(filtered);
 }
 
-// イベントリスナー登録
+// イベント登録
 searchInput.addEventListener("input", applyFilters);
 typeFilters.forEach(cb => cb.addEventListener("change", applyFilters));
 sourceFilters.forEach(cb => cb.addEventListener("change", applyFilters));
