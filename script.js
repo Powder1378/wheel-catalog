@@ -35,22 +35,28 @@ for (let i = 51; i <= 113; i++) {
   });
 }
 
+
+// 要素の取得
 const container = document.getElementById("wheel-container");
 const searchInput = document.getElementById("search");
+const typeFilters = document.querySelectorAll(".type-filter");
+const sourceFilters = document.querySelectorAll(".source-filter");
+const filterSummary = document.getElementById("filter-summary");
 
-// サイドバー用の絞り込み情報を取得
-const searchInput = document.getElementById("search");
-const checkboxes = document.querySelectorAll("input[type='checkbox']");
-const container = document.getElementById("wheel-container");
-const toggle = document.querySelector(".menu-toggle");
-const sidebar = document.getElementById("sidebar");
-
-toggle.addEventListener("click", () => {
-  sidebar.classList.toggle("open");
+// ハンバーガーメニュー
+const menuToggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("menu");
+menuToggle.addEventListener("click", () => {
+  menu.classList.toggle("open");
 });
 
+// データ表示
 function displayData(items) {
   container.innerHTML = "";
+  if (items.length === 0) {
+    container.innerHTML = "<p>該当するホイールはありません。</p>";
+    return;
+  }
   items.forEach(item => {
     const card = document.createElement("div");
     card.className = "wheel-card";
@@ -62,22 +68,39 @@ function displayData(items) {
   });
 }
 
+// フィルタの適用
 function applyFilters() {
   const keyword = searchInput.value.toLowerCase();
-  const selectedTypes = Array.from(document.querySelectorAll("input[name='type']:checked")).map(cb => cb.value);
-  const selectedSources = Array.from(document.querySelectorAll("input[name='source']:checked")).map(cb => cb.value);
+
+  const selectedTypes = Array.from(typeFilters)
+    .filter(cb => cb.checked)
+    .map(cb => cb.value);
+
+  const selectedSources = Array.from(sourceFilters)
+    .filter(cb => cb.checked)
+    .map(cb => cb.value);
 
   const filtered = data.filter(item => {
-    const matchesKeyword = item.name.toLowerCase().includes(keyword);
-    const matchesType = selectedTypes.length === 0 || selectedTypes.includes(item.type);
-    const matchesSource = selectedSources.length === 0 || selectedSources.includes(item.source);
-    return matchesKeyword && matchesType && matchesSource;
+    const matchesName = item.name.toLowerCase().includes(keyword);
+    const matchesType = selectedTypes.includes(item.type);
+    const matchesSource = selectedSources.includes(item.source);
+    return matchesName && matchesType && matchesSource;
   });
+
+  // 絞り込みの概要を表示
+  if (keyword === "" && selectedTypes.length === 2 && selectedSources.length === 2) {
+    filterSummary.textContent = "絞り込み結果：すべて表示";
+  } else {
+    filterSummary.textContent = `絞り込み結果：${filtered.length} 件`;
+  }
 
   displayData(filtered);
 }
 
+// イベントリスナー登録
 searchInput.addEventListener("input", applyFilters);
-checkboxes.forEach(cb => cb.addEventListener("change", applyFilters));
+typeFilters.forEach(cb => cb.addEventListener("change", applyFilters));
+sourceFilters.forEach(cb => cb.addEventListener("change", applyFilters));
 
-displayData(data);
+// 初期表示
+applyFilters();
