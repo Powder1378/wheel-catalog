@@ -78,34 +78,6 @@ input[type="checkbox"] {
   padding: 1rem;
 }
 
-/* ハンバーガーメニュー関連 */
-.menu {
-  position: fixed;
-  top: 0;
-  right: -300px;
-  width: 300px;
-  height: 100vh;
-  background-color: white;
-  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.2);
-  padding: 1rem;
-  overflow-y: auto;
-  transition: right 0.3s ease;
-  z-index: 999;
-}
-
-.menu.active {
-  right: 0;
-}
-
-.menu-toggle {
-  font-size: 2rem;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  cursor: pointer;
-  z-index: 1000;
-}
-
 .wheel-card {
   background: white;
   border: 1px solid #ccc;
