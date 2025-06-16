@@ -26,6 +26,17 @@ const data = [
   { name: "エンドーv2", image: "./images/SPT_V_24.png",type: "Sports",source: "Vanilla"},
   { name: "スプリット・シックス", image: "./images/SPT_V_25.png",type: "Sports",source: "Vanilla"},
 
+  // SPT_M_51 ~ SPT_M_113 を追加
+for (let i = 51; i <= 113; i++) {
+  data.push({
+    name: `Sports ${i}`,
+    image: `./images/SPT_M_${i}.png`,
+    type: "Sports",
+    source: "MOD"
+  });
+},
+
+
   // SUV
   { name: "VIP", image: "./images/SUV_V_1.png",type: "SUV",source: "Vanilla"},
   { name: "ベネファクター", image: "./images/SUV_V_2.png",type: "SUV",source: "Vanilla"},
@@ -48,15 +59,6 @@ const data = [
   { name: "カッター", image: "./images/SUV_V_19.png",type: "SUV",source: "Vanilla"}
   
 ];
-// SPT_M_51 ~ SPT_M_113 を追加
-for (let i = 51; i <= 113; i++) {
-  data.push({
-    name: `Sports ${i}`,
-    image: `./images/SPT_M_${i}.png`,
-    type: "Sports",
-    source: "MOD"
-  });
-}
 
 // SUV
 
