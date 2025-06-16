@@ -24,7 +24,29 @@ const data = [
   { name: "湾岸マスター", image: "./images/SPT_V_22.png",type: "Sports",source: "Vanilla"},
   { name: "スーパーファイブ", image: "./images/SPT_V_23.png",type: "Sports",source: "Vanilla"},
   { name: "エンドーv2", image: "./images/SPT_V_24.png",type: "Sports",source: "Vanilla"},
-  { name: "スプリット・シックス", image: "./images/SPT_V_25.png",type: "Sports",source: "Vanilla"}
+  { name: "スプリット・シックス", image: "./images/SPT_V_25.png",type: "Sports",source: "Vanilla"},
+
+  // SUV
+  { name: "VIP", image: "./images/SUV_V_1.png",type: "SUV",source: "Vanilla"},
+  { name: "ベネファクター", image: "./images/SUV_V_2.png",type: "SUV",source: "Vanilla"},
+  { name: "コスモ", image: "./images/SUV_V_3.png",type: "SUV",source: "Vanilla"},
+  { name: "ビップ", image: "./images/SUV_V_4.png",type: "SUV",source: "Vanilla"},
+  { name: "ロイヤル・シックス", image: "./images/SUV_V_5.png",type: "SUV",source: "Vanilla"},
+  { name: "ファゴーム", image: "./images/SUV_V_6.png",type: "SUV",source: "Vanilla"},
+  { name: "デラックス", image: "./images/SUV_V_7.png",type: "SUV",source: "Vanilla"},
+  { name: "アイスド・アウト", image: "./images/SUV_V_8.png",type: "SUV",source: "Vanilla"},
+  { name: "コンシェンティ", image: "./images/SUV_V_9.png",type: "SUV",source: "Vanilla"},
+  { name: "ロズスピード・テン", image: "./images/SUV_V_10.png",type: "SUV",source: "Vanilla"},
+  { name: "スーパーノヴァ", image: "./images/SUV_V_11.png",type: "SUV",source: "Vanilla"},
+  { name: "オベイRS", image: "./images/SUV_V_12.png",type: "SUV",source: "Vanilla"},
+  { name: "ロズスピード・ボーラー", image: "./images/SUV_V_13.png",type: "SUV",source: "Vanilla"},
+  { name: "エクストラバガンゾ", image: "./images/SUV_V_14.png",type: "SUV",source: "Vanilla"},
+  { name: "スプリット・シックス", image: "./images/SUV_V_15.png",type: "SUV",source: "Vanilla"},
+  { name: "エンパワード", image: "./images/SUV_V_16.png",type: "SUV",source: "Vanilla"},
+  { name: "サンライズ", image: "./images/SUV_V_17.png",type: "SUV",source: "Vanilla"},
+  { name: "ダッシュVIP", image: "./images/SUV_V_18.png",type: "SUV",source: "Vanilla"},
+  { name: "カッター", image: "./images/SUV_V_19.png",type: "SUV",source: "Vanilla"}
+  
 ];
 // SPT_M_51 ~ SPT_M_113 を追加
 for (let i = 51; i <= 113; i++) {
