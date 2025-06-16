@@ -1,30 +1,57 @@
-.container {
-  box-sizing: border-box;
-  width: min(1020px, 100%);
-  padding: 0 10px;
-  margin: auto;
+body {
+  font-family: sans-serif;
+  background-color: #f9f5ff;
+  color: #4a0072;
+  margin: 0;
+  padding: 0;
 }
 
-.js-base {
-  display: none;
+header {
+  background-color: #b388ff;
+  padding: 1rem;
+  text-align: center;
+  color: white;
 }
 
-.spreadsheets {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+header h1 {
+  margin: 0;
+  font-size: 2rem;
 }
 
-.spreadsheets li {
-  width: 23%;
+#search {
+  margin-top: 1rem;
+  padding: 0.5rem;
+  width: 60%;
+  max-width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
 }
-@media (max-width: 767px) {
-  .spreadsheets li {
-    width: 30%;
-  }
-  .spreadsheets img {
-    width: 150px;
-    height: 150px;
-    object-fit: contain;
-  }
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
 }
+
+.wheel-card {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  padding: 0.5rem;
+}
+
+.wheel-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+.wheel-card h3 {
+  margin: 0.5rem 0 0;
+  font-size: 1rem;
+}
+
