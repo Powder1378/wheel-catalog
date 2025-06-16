@@ -45,13 +45,19 @@ const typeFilters = document.querySelectorAll(".type-filter");
 const sourceFilters = document.querySelectorAll(".source-filter");
 const filterSummary = document.getElementById("filter-summary");
 
-// データ表示
+// ホイールカードの描画
 function displayData(items) {
   container.innerHTML = "";
+
   if (items.length === 0) {
-    container.innerHTML = "<p>該当するホイールはありません。</p>";
+    container.innerHTML = `
+      <div class="no-result">
+        <p>この条件に合うホイールはまだ <strong>作成中</strong> です。</p>
+      </div>
+    `;
     return;
   }
+
   items.forEach(item => {
     const card = document.createElement("div");
     card.className = "wheel-card";
@@ -81,46 +87,10 @@ function applyFilters() {
     const matchesSource = selectedSources.includes(item.source);
     return matchesName && matchesType && matchesSource;
   });
-  
-// 絞り込みの概要を表示
-filterSummary.textContent = `絞り込み結果：${filtered.length} 件`;
 
+  filterSummary.textContent = `絞り込み結果：${filtered.length} 件`;
 
-// ここは applyFilters() の中 → displayData 呼び出し
-displayData(filtered);
-
-// displayData は applyFilters の外で定義
-function displayData(items) {
-  container.innerHTML = "";
-
-  if (items.length === 0) {
-    container.innerHTML = `
-      <div class="no-result">
-        <p>この条件に合うホイールはまだ <strong>作成中</strong> です。</p>
-      </div>
-    `;
-    return;
-  }
-
-  items.forEach(item => {
-    const card = document.createElement("div");
-    card.className = "wheel-card";
-    card.innerHTML = `
-      <img src="${item.image}" alt="${item.name}">
-      <h3>${item.name}</h3>
-    `;
-    container.appendChild(card);
-  });
-}
-  items.forEach(item => {
-    const card = document.createElement("div");
-    card.className = "wheel-card";
-    card.innerHTML = `
-      <img src="${item.image}" alt="${item.name}">
-      <h3>${item.name}</h3>
-    `;
-    container.appendChild(card);
-  });
+  displayData(filtered);
 }
 
 // イベントリスナー登録
@@ -128,29 +98,27 @@ searchInput.addEventListener("input", applyFilters);
 typeFilters.forEach(cb => cb.addEventListener("change", applyFilters));
 sourceFilters.forEach(cb => cb.addEventListener("change", applyFilters));
 
-// ハンバーガーメニューの要素取得
+// ハンバーガーメニュー操作
 const menuToggle = document.getElementById("menu-toggle");
 const menu = document.getElementById("menu");
 
-// ☰をクリックでメニュー開閉
-menuToggle.addEventListener("click", () => {
+menuToggle.addEventListener("click", (e) => {
+  e.stopPropagation();
   menu.classList.toggle("active");
 });
 
 // メニュー外クリックで閉じる
 document.addEventListener("click", (e) => {
-  if (menu.classList.contains("active")) {
-    const isClickInsideMenu = menu.contains(e.target);
-    const isClickOnToggle = menuToggle.contains(e.target);
-    if (!isClickInsideMenu && !isClickOnToggle) {
-      menu.classList.remove("active");
-    }
+  if (menu.classList.contains("active") &&
+      !menu.contains(e.target) &&
+      !menuToggle.contains(e.target)) {
+    menu.classList.remove("active");
   }
 });
 
 // ESCキーで閉じる
 document.addEventListener("keydown", (e) => {
-  if (e.key === "Escape" && menu.classList.contains("active")) {
+  if (e.key === "Escape") {
     menu.classList.remove("active");
   }
 });
