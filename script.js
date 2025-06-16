@@ -1,4 +1,5 @@
 const data = [
+// Sports
   { name: "インフェルノ", image: "./images/SPT_V_1.png",type: "Sports",source: "Vanilla"},
   { name: "ディープファイブ", image: "./images/SPT_V_2.png",type: "Sports",source: "Vanilla"},
   { name: "ロズスピード Mr.V", image: "./images/SPT_V_3.png",type: "Sports",source: "Vanilla"},
@@ -35,6 +36,7 @@ for (let i = 51; i <= 113; i++) {
   });
 }
 
+// SUV
 
 // 要素の取得
 const container = document.getElementById("wheel-container");
@@ -81,11 +83,8 @@ function applyFilters() {
   });
   
 // 絞り込みの概要を表示
-if (keyword === "" && selectedTypes.length === 2 && selectedSources.length === 2) {
-  filterSummary.textContent = "絞り込み結果：すべて表示";
-} else {
-  filterSummary.textContent = `絞り込み結果：${filtered.length} 件`;
-}
+filterSummary.textContent = `絞り込み結果：${filtered.length} 件`;
+
 
 // ここは applyFilters() の中 → displayData 呼び出し
 displayData(filtered);
