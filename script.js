@@ -1,19 +1,19 @@
 const data = [
   {
     name: "インフェルノ",
-    image: "./images/SPT_V_1.jpg"
+    image: "./images/SPT_V_1.png"
   },
   {
     name: "ディープファイブ",
-    image: "./images/SPT_V_2.jpg"
+    image: "./images/SPT_V_2.png"
   },
   {
     name: "ロズスピード Mr.V",
-    image: "./images/SPT_V_3.jpg"
+    image: "./images/SPT_V_3.png"
   },
   {
     name: "ダイヤモンドカット",
-    image: "./images/SPT_V_4.jpg"
+    image: "./images/SPT_V_4.png"
   }
 ];
 
