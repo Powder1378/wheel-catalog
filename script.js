@@ -46,8 +46,56 @@ const data = [
   { name: "エンパワード", image: "./images/SUV_V_16.png",type: "SUV",source: "Vanilla"},
   { name: "サンライズ", image: "./images/SUV_V_17.png",type: "SUV",source: "Vanilla"},
   { name: "ダッシュVIP", image: "./images/SUV_V_18.png",type: "SUV",source: "Vanilla"},
-  { name: "カッター", image: "./images/SUV_V_19.png",type: "SUV",source: "Vanilla"}
-  
+  { name: "カッター", image: "./images/SUV_V_19.png",type: "SUV",source: "Vanilla"},
+
+
+  // Muscle
+  { name: "クラシック・ファイブ", image: "./images/MUS_V_1.png",type: "MUS",source: "Vanilla"},
+  { name: "デュークス", image: "./images/MUS_V_2.png",type: "MUS",source: "Vanilla"},
+  { name: "マッスル・フリーク", image: "./images/MUS_V_3.png",type: "MUS",source: "Vanilla"},
+  { name: "クラッカ", image: "./images/MUS_V_4.png",type: "MUS",source: "Vanilla"},
+  { name: "アズリアル", image: "./images/MUS_V_5.png",type: "MUS",source: "Vanilla"},
+  { name: "メカ", image: "./images/MUS_V_6.png",type: "MUS",source: "Vanilla"},
+  { name: "ブラック・トップ", image: "./images/MUS_V_7.png",type: "MUS",source: "Vanilla"},
+  { name: "ドラッグSPL", image: "./images/MUS_V_8.png",type: "MUS",source: "Vanilla"},
+  { name: "リボルバー", image: "./images/MUS_V_9.png",type: "MUS",source: "Vanilla"},
+  { name: "クラシック・ロッド", image: "./images/MUS_V_10.png",type: "MUS",source: "Vanilla"},
+  { name: "フェアリー", image: "./images/MUS_V_11.png",type: "MUS",source: "Vanilla"},
+  { name: "スプーナー", image: "./images/MUS_V_12.png",type: "MUS",source: "Vanilla"},
+  { name: "ファイブスター", image: "./images/MUS_V_13.png",type: "MUS",source: "Vanilla"},
+  { name: "オールドスクール", image: "./images/MUS_V_14.png",type: "MUS",source: "Vanilla"},
+  { name: "カエル・ヘフェッター", image: "./images/MUS_V_15.png",type: "MUS",source: "Vanilla"},
+  { name: "ドッドマン", image: "./images/MUS_V_16.png",type: "MUS",source: "Vanilla"},
+  { name: "シックス・ガン", image: "./images/MUS_V_17.png",type: "MUS",source: "Vanilla"},
+  { name: "マーセナリー", image: "./images/MUS_V_18.png",type: "MUS",source: "Vanilla"},
+
+
+  // Offroad
+  { name: "レイダー", image: "./images/OFF_V_1.png",type: "OFF",source: "Vanilla"},
+  { name: "マッドスリンガー", image: "./images/OFF_V_2.png",type: "OFF",source: "Vanilla"},
+  { name: "ネヴィス", image: "./images/OFF_V_3.png",type: "OFF",source: "Vanilla"},
+  { name: "ケアンゴーム", image: "./images/OFF_V_4.png",type: "OFF",source: "Vanilla"},
+  { name: "アマゾン", image: "./images/OFF_V_5.png",type: "OFF",source: "Vanilla"},
+  { name: "チャレンジャー", image: "./images/OFF_V_6.png",type: "OFF",source: "Vanilla"},
+  { name: "デューン・バッシャー", image: "./images/OFF_V_7.png",type: "OFF",source: "Vanilla"},
+  { name: "ファイブスター", image: "./images/OFF_V_8.png",type: "OFF",source: "Vanilla"},
+  { name: "ロッククロウラー", image: "./images/OFF_V_9.png",type: "OFF",source: "Vanilla"},
+  { name: "ミルスペック・スティーリー", image: "./images/OFF_V_10.png",type: "OFF",source: "Vanilla"},
+  { name: "レトロ・スティーリー", image: "./images/OFF_V_11.png",type: "OFF",source: "Vanilla"},
+  { name: "耐久スティーリー", image: "./images/OFF_V_12.png",type: "OFF",source: "Vanilla"},
+  { name: "凹型スティーリー", image: "./images/OFF_V_13.png",type: "OFF",source: "Vanilla"},
+  { name: "警察仕様スティーリー", image: "./images/OFF_V_14.png",type: "OFF",source: "Vanilla"},
+  { name: "軽量スティーリー", image: "./images/OFF_V_15.png",type: "OFF",source: "Vanilla"},
+  { name: "デュークス", image: "./images/OFF_V_16.png",type: "OFF",source: "Vanilla"},
+  { name: "アバランチ", image: "./images/OFF_V_17.png",type: "OFF",source: "Vanilla"},
+  { name: "マウンテンマン", image: "./images/OFF_V_18.png",type: "OFF",source: "Vanilla"},
+  { name: "リッジクライマー", image: "./images/OFF_V_19.png",type: "OFF",source: "Vanilla"},
+  { name: "凸形5", image: "./images/OFF_V_20.png",type: "OFF",source: "Vanilla"},
+  { name: "フラット6", image: "./images/OFF_V_21.png",type: "OFF",source: "Vanilla"},
+  { name: "全地形モンスター", image: "./images/OFF_V_22.png",type: "OFF",source: "Vanilla"},
+  { name: "ドラッグSPL", image: "./images/OFF_V_23.png",type: "OFF",source: "Vanilla"},
+  { name: "凹型ラリーマスター", image: "./images/OFF_V_24.png",type: "OFF",source: "Vanilla"},
+  { name: "凹凸スノーフレーク", image: "./images/OFF_V_25.png",type: "OFF",source: "Vanilla"},
 ];
 
   // SPT_M_51 ~ SPT_M_113 を追加
@@ -59,9 +107,16 @@ for (let i = 51; i <= 113; i++) {
     source: "MOD"
   });
 }
-// SUV
 
-
+  // OFF_M_36 ~ OFF_M_50 を追加
+for (let i = 36; i <= 50; i++) {
+  data.push({
+    name: `Offroad ${i}`,
+    image: `./images/OFF_M_${i}.png`,
+    type: "Offroad",
+    source: "MOD"
+  });
+}
 // 要素取得
 const container = document.getElementById("wheel-container");
 const searchInput = document.getElementById("search");
