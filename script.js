@@ -29,7 +29,7 @@ const data = [
 // SPT_M_51 ~ SPT_M_113 を追加
 for (let i = 51; i <= 113; i++) {
   data.push({
-    name: `SPT_M_${i}`,
+    name: `Sports ${i}`,
     image: `./images/SPT_M_${i}.png`
   });
 }
