@@ -14,7 +14,7 @@ const data = [
   {
     name: "ダイヤモンドカット",
     image: "./images/SPT_V_4.png"
-  } ,
+  },
   {
     name: "クロノ",
     image: "./images/SPT_V_5.png"
@@ -44,64 +44,60 @@ const data = [
     image: "./images/SPT_V_11.png"
   },
   {
-    name: "エンドーv.1",
+    name: "GTワン",
     image: "./images/SPT_V_12.png"
   },
   {
-    name: "GTワン",
+    name: "デューバー7",
     image: "./images/SPT_V_13.png"
   },
   {
-    name: "デューバー7",
+    name: "ウザール",
     image: "./images/SPT_V_14.png"
   },
   {
-    name: "ウザール",
+    name: "グラウンドライド",
     image: "./images/SPT_V_15.png"
   },
   {
-    name: "グラウンドライド",
+    name: "Sレーサー",
     image: "./images/SPT_V_16.png"
   },
   {
-    name: "Sレーサー",
+    name: "ベナム",
     image: "./images/SPT_V_17.png"
   },
   {
-    name: "ベナム",
+    name: "コスモ",
     image: "./images/SPT_V_18.png"
   },
   {
-    name: "コスモ",
+    name: "ダッシュVIP",
     image: "./images/SPT_V_19.png"
   },
   {
-    name: "ダッシュVIP",
+    name: "アイスキッド",
     image: "./images/SPT_V_20.png"
   },
   {
-    name: "アイスキッド",
+    name: "ラウフェルド",
     image: "./images/SPT_V_21.png"
   },
   {
-    name: "ラウフェルド",
+    name: "湾岸マスター",
     image: "./images/SPT_V_22.png"
   },
   {
-    name: "湾岸マスター",
+    name: "スーパーファイブ",
     image: "./images/SPT_V_23.png"
   },
   {
-    name: "スーパーファイブ",
+    name: "エンドーv2",
     image: "./images/SPT_V_24.png"
   },
   {
-    name: "エンドーv2",
-    image: "./images/SPT_V_25.png"
-  },
-  {
     name: "スプリット・シックス",
-    image: "./images/SPT_V_5.png"
+    image: "./images/SPT_V_25.png"
   }
 ];
 
