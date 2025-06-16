@@ -1,17 +1,29 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ホイールカタログ</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
     <h1>ホイールカタログ</h1>
-    <input type="text" id="search" placeholder="ホイール名で検索...">
+    <div id="filter-summary">絞り込み結果：すべて表示</div>
+    <div class="menu-toggle" id="menu-toggle">
+      &#9776;
+    </div>
+    <nav class="menu" id="menu">
+      <label><input type="checkbox" class="type-filter" value="Sports" checked> Sports</label>
+      <label><input type="checkbox" class="type-filter" value="Offroad" checked> Offroad</label>
+      <label><input type="checkbox" class="source-filter" value="Vanilla" checked> Vanilla</label>
+      <label><input type="checkbox" class="source-filter" value="MOD" checked> MOD</label>
+      <input type="text" id="search" placeholder="名前で検索">
+    </nav>
   </header>
+
   <main id="wheel-container" class="grid"></main>
-  <script src="./script.js"></script>
+
+  <script src="script.js"></script>
 </body>
 </html>
