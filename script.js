@@ -79,15 +79,19 @@ function applyFilters() {
     const matchesSource = selectedSources.includes(item.source);
     return matchesName && matchesType && matchesSource;
   });
+  
+// 絞り込みの概要を表示
+if (keyword === "" && selectedTypes.length === 2 && selectedSources.length === 2) {
+  filterSummary.textContent = "絞り込み結果：すべて表示";
+} else {
+  filterSummary.textContent = `絞り込み結果：${filtered.length} 件`;
+}
 
-  // 絞り込みの概要を表示
-  if (keyword === "" && selectedTypes.length === 2 && selectedSources.length === 2) {
-    filterSummary.textContent = "絞り込み結果：すべて表示";
-  } else {
-    filterSummary.textContent = `絞り込み結果：${filtered.length} 件`;
-  }
+// ここは applyFilters() の中 → displayData 呼び出し
+displayData(filtered);
 
- function displayData(items) {
+// displayData は applyFilters の外で定義
+function displayData(items) {
   container.innerHTML = "";
 
   if (items.length === 0) {
@@ -99,6 +103,16 @@ function applyFilters() {
     return;
   }
 
+  items.forEach(item => {
+    const card = document.createElement("div");
+    card.className = "wheel-card";
+    card.innerHTML = `
+      <img src="${item.image}" alt="${item.name}">
+      <h3>${item.name}</h3>
+    `;
+    container.appendChild(card);
+  });
+}
   items.forEach(item => {
     const card = document.createElement("div");
     card.className = "wheel-card";
