@@ -26,18 +26,6 @@
         </div>
       </div>
 
-      <div class="filter-group">
-        <h4>ソース</h4>
-        <label><input type="checkbox" class="source-filter" value="Vanilla" checked> Vanilla</label>
-        <label><input type="checkbox" class="source-filter" value="MOD" checked> MOD</label>
-
-        <!-- ソースの全選択・解除ボタン -->
-        <div class="filter-buttons">
-          <button type="button" id="source-all-on">すべて選択</button>
-          <button type="button" id="source-all-off">すべて解除</button>
-        </div>
-      </div>
-
       <input type="text" id="search" placeholder="名前で検索">
       <p id="filter-summary">絞り込み結果：すべて表示</p>
     </div>
@@ -60,7 +48,6 @@
   <script>
     document.addEventListener("DOMContentLoaded", () => {
       const typeFilters = document.querySelectorAll(".type-filter");
-      const sourceFilters = document.querySelectorAll(".source-filter");
 
       document.getElementById("type-all-on").addEventListener("click", () => {
         typeFilters.forEach(cb => cb.checked = true);
@@ -69,16 +56,6 @@
 
       document.getElementById("type-all-off").addEventListener("click", () => {
         typeFilters.forEach(cb => cb.checked = false);
-        applyFilters();
-      });
-
-      document.getElementById("source-all-on").addEventListener("click", () => {
-        sourceFilters.forEach(cb => cb.checked = true);
-        applyFilters();
-      });
-
-      document.getElementById("source-all-off").addEventListener("click", () => {
-        sourceFilters.forEach(cb => cb.checked = false);
         applyFilters();
       });
     });
