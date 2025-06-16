@@ -123,7 +123,6 @@ function displayData(items) {
     container.appendChild(card);
   });
 }
-}
 
 // イベントリスナー登録
 searchInput.addEventListener("input", applyFilters);
