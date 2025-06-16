@@ -128,12 +128,31 @@ searchInput.addEventListener("input", applyFilters);
 typeFilters.forEach(cb => cb.addEventListener("change", applyFilters));
 sourceFilters.forEach(cb => cb.addEventListener("change", applyFilters));
 
-// ハンバーガーメニュー
+// ハンバーガーメニューの要素取得
 const menuToggle = document.getElementById("menu-toggle");
 const menu = document.getElementById("menu");
 
+// ☰をクリックでメニュー開閉
 menuToggle.addEventListener("click", () => {
   menu.classList.toggle("active");
+});
+
+// メニュー外クリックで閉じる
+document.addEventListener("click", (e) => {
+  if (menu.classList.contains("active")) {
+    const isClickInsideMenu = menu.contains(e.target);
+    const isClickOnToggle = menuToggle.contains(e.target);
+    if (!isClickInsideMenu && !isClickOnToggle) {
+      menu.classList.remove("active");
+    }
+  }
+});
+
+// ESCキーで閉じる
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && menu.classList.contains("active")) {
+    menu.classList.remove("active");
+  }
 });
 
 // 初期表示
