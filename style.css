@@ -1,7 +1,11 @@
 /* ベース設定 */
+* {
+  box-sizing: border-box;
+}
+
 body {
-  font-family: "Arial", sans-serif;
-  background-color: #f4f0fb;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f5f0fa;
   margin: 0;
   padding: 0;
   color: #333;
@@ -11,14 +15,14 @@ header {
   background-color: #6a1b9a;
   color: white;
   padding: 1rem;
-  position: relative;
 }
 
 h1 {
   margin: 0;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
 
+/* フィルターエリア */
 #filters {
   margin-top: 0.5rem;
   font-size: 0.9rem;
@@ -32,38 +36,47 @@ h1 {
   width: 100%;
   max-width: 300px;
   padding: 0.5rem;
-  border: 1px solid #ccc;
+  border: 1px solid #aaa;
   border-radius: 4px;
 }
 
-/* グリッド表示 */
-#wheel-container {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-  gap: 1rem;
-  padding: 1rem;
+#filter-summary {
+  flex-basis: 100%;
+  margin-top: 0.5rem;
+  font-size: 0.85rem;
+  color: #ddd;
 }
 
-/* カードデザイン */
+/* グリッド表示修正 */
+#wheel-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* ホイールカード */
 .wheel-card {
   background: white;
-  border: 1px solid #ccc;
+  border: 2px solid #ba68c8;
   padding: 1rem;
-  border-radius: 8px;
+  border-radius: 12px;
   text-align: center;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.05);
-  transition: transform 0.2s ease;
+  box-shadow: 2px 2px 6px rgba(106, 27, 154, 0.15);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
 .wheel-card:hover {
   transform: scale(1.03);
-  border-color: #6a1b9a;
+  box-shadow: 3px 3px 12px rgba(106, 27, 154, 0.3);
 }
 
 .wheel-card img {
   max-width: 100%;
   height: auto;
-  border-radius: 6px;
+  border-radius: 8px;
 }
 
 .wheel-card h3 {
@@ -80,26 +93,27 @@ h1 {
 }
 
 .no-result strong {
-  color: purple;
+  color: #6a1b9a;
 }
 
 /* フッター */
 .site-footer {
-  background-color: #f2f2f2;
+  background-color: #e1bee7;
   padding: 20px;
   text-align: center;
   font-size: 14px;
   color: #333;
-  border-top: 1px solid #ccc;
+  border-top: 1px solid #ba68c8;
 }
 
 .site-footer h2 {
   font-size: 18px;
   margin-bottom: 10px;
+  color: #4a148c;
 }
 
 .site-footer a {
-  color: #0066cc;
+  color: #4a148c;
   text-decoration: none;
 }
 
