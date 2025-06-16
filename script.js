@@ -43,13 +43,6 @@ const typeFilters = document.querySelectorAll(".type-filter");
 const sourceFilters = document.querySelectorAll(".source-filter");
 const filterSummary = document.getElementById("filter-summary");
 
-// ハンバーガーメニュー
-const menuToggle = document.getElementById("menu-toggle");
-const menu = document.getElementById("menu");
-menuToggle.addEventListener("click", () => {
-  menu.classList.toggle("open");
-});
-
 // データ表示
 function displayData(items) {
   container.innerHTML = "";
