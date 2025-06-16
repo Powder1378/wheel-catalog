@@ -128,5 +128,13 @@ searchInput.addEventListener("input", applyFilters);
 typeFilters.forEach(cb => cb.addEventListener("change", applyFilters));
 sourceFilters.forEach(cb => cb.addEventListener("change", applyFilters));
 
+// ハンバーガーメニュー
+const menuToggle = document.getElementById("menu-toggle");
+const menu = document.getElementById("menu");
+
+menuToggle.addEventListener("click", () => {
+  menu.classList.toggle("active");
+});
+
 // 初期表示
 applyFilters();
