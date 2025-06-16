@@ -105,14 +105,6 @@ const data = [
   }
 ];
 
-// SPT_M_51 ~ SPT_M_113 の連番データを追加
-for (let i = 51; i <= 113; i++) {
-  data.push({
-    name: `SPT_M_${i}`,
-    image: `./images/SPT_M_${i}.png`
-  });
-}
-
 const container = document.getElementById("wheel-container");
 const searchInput = document.getElementById("search");
 
@@ -121,10 +113,10 @@ function displayData(items) {
   items.forEach(item => {
     const card = document.createElement("div");
     card.className = "wheel-card";
-    card.innerHTML = `
+    card.innerHTML = 
       <img src="${item.image}" alt="${item.name}">
       <h3>${item.name}</h3>
-    `;
+    ;
     container.appendChild(card);
   });
 }
