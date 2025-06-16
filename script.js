@@ -87,7 +87,28 @@ function applyFilters() {
     filterSummary.textContent = `絞り込み結果：${filtered.length} 件`;
   }
 
-  displayData(filtered);
+ function displayData(items) {
+  container.innerHTML = "";
+
+  if (items.length === 0) {
+    container.innerHTML = `
+      <div class="no-result">
+        <p>この条件に合うホイールはまだ <strong>作成中</strong> です。</p>
+      </div>
+    `;
+    return;
+  }
+
+  items.forEach(item => {
+    const card = document.createElement("div");
+    card.className = "wheel-card";
+    card.innerHTML = `
+      <img src="${item.image}" alt="${item.name}">
+      <h3>${item.name}</h3>
+    `;
+    container.appendChild(card);
+  });
+}
 }
 
 // イベントリスナー登録
