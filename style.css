@@ -23,20 +23,6 @@ h1 {
   margin-top: 0.5rem;
   font-size: 0.9rem;
 }
-
-/* ハンバーガーメニュー */
-.menu-toggle {
-  position: absolute;
-  right: 1rem;
-  top: 1rem;
-  background: transparent;
-  border: none;
-  color: white;
-  font-size: 1.8rem;
-  cursor: pointer;
-  z-index: 1000;
-}
-
 /* メニュー本体 */
 .filter-menu {
   position: absolute;
