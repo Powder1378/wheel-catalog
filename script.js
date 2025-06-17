@@ -441,26 +441,19 @@ function applyFilters() {
     .filter(cb => cb.checked)
     .map(cb => cb.value);
 
-  const colorValue = document.querySelector('input[name="color"]:checked')?.value;
-
-   const filtered = data.filter(item => {
+  const filtered = data.filter(item => {
     const matchesName = item.name.toLowerCase().includes(keyword);
-
     const matchesType = selectedTypes.includes(item.type);
     const matchesSource = selectedSources.includes(item.source);
-    const matchesChrome = selectedChrome.includes("All") || selectedChrome.includes(item.chrome);
-     
-    let matchesColor = true;
-    if (selectedSources.includes("MOD") && colorValue !== "all") {
-      matchesColor = item.color === colorValue;
-    }
+    const matchesChrome = selectedChrome.length === 0 || selectedChrome.includes(item.chrome);
 
-    return matchesName && matchesType && matchesSource && matchesChrome && matchesColor;
+    return matchesName && matchesType && matchesSource && matchesChrome;
   });
 
   filterSummary.textContent = `絞り込み結果：${filtered.length} 件`;
   displayData(filtered);
 }
+
 // イベント登録
 searchInput.addEventListener("input", applyFilters);
 typeFilters.forEach(cb => cb.addEventListener("change", applyFilters));
