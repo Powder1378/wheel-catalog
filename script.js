@@ -437,20 +437,20 @@ function applyFilters() {
     .filter(cb => cb.checked)
     .map(cb => cb.value);
 
-  const selectedChrome = Array.from(chromeFilters)
-    .filter(cb => cb.checked)
-    .map(cb => cb.value);
+  const selectedChrome = document.querySelector('input[name="chrome"]:checked')?.value || "All";
 
   const filtered = data.filter(item => {
     const matchesName = item.name.toLowerCase().includes(keyword);
     const matchesType = selectedTypes.includes(item.type);
     const matchesSource = selectedSources.includes(item.source);
-    const matchesChrome = selectedChrome.includes(item.chrome);
+    const matchesChrome = selectedChrome === "All" || item.chrome === selectedChrome;
 
     return matchesName && matchesType && matchesSource && matchesChrome;
   });
 
   filterSummary.textContent = `絞り込み結果：${filtered.length} 件`;
+  displayData(filtered);
+}erSummary.textContent = `絞り込み結果：${filtered.length} 件`;
   displayData(filtered);
 }
 
