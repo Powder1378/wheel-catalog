@@ -409,7 +409,23 @@ function applyFilters() {
 // イベント登録
 searchInput.addEventListener("input", applyFilters);
 typeFilters.forEach(cb => cb.addEventListener("change", applyFilters));
-sourceFilters.forEach(cb => cb.addEventListener("change", applyFilters));
+sourceFilters.forEach(cb => {
+  cb.addEventListener("change", () => {
+    const selectedSources = Array.from(sourceFilters)
+      .filter(cb => cb.checked)
+      .map(cb => cb.value);
+
+    const colorFilter = document.getElementById("color-filter");
+    if (selectedSources.includes("MOD")) {
+      colorFilter.style.display = "flex";
+    } else {
+      colorFilter.style.display = "none";
+    }
+
+    applyFilters();
+  });
+});
+
 chromeFilters.forEach(cb => cb.addEventListener("change", applyFilters));
 // 初期表示
 applyFilters();
