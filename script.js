@@ -445,7 +445,7 @@ function applyFilters() {
     const matchesName = item.name.toLowerCase().includes(keyword);
     const matchesType = selectedTypes.includes(item.type);
     const matchesSource = selectedSources.includes(item.source);
-    const matchesChrome = selectedChrome.length === 0 || selectedChrome.includes(item.chrome);
+    const matchesChrome = selectedChrome.includes(item.chrome);
 
     return matchesName && matchesType && matchesSource && matchesChrome;
   });
