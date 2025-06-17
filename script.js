@@ -95,7 +95,11 @@ const data = [
   { name: "全地形モンスター", image: "./images/OFF_V_22.png",type: "Offroad",source: "Vanilla"},
   { name: "ドラッグSPL", image: "./images/OFF_V_23.png",type: "Offroad",source: "Vanilla"},
   { name: "凹型ラリーマスター", image: "./images/OFF_V_24.png",type: "Offroad",source: "Vanilla"},
-  { name: "凹凸スノーフレーク", image: "./images/OFF_V_25.png",type: "Offroad",source: "Vanilla"}
+  { name: "凹凸スノーフレーク", image: "./images/OFF_V_25.png",type: "Offroad",source: "Vanilla"},
+
+
+  // Lowrider
+  { name: "フレア", image: "./images/LOW_V_1.png",type: "Lowrider",source: "Vanilla"}
 ];
 
   // SPT_M_51 ~ SPT_M_113 を追加
