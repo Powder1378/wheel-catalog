@@ -141,14 +141,3 @@ h1 {
 .filter-buttons button:hover {
   background-color: #8e24aa;
 }
-
-.image-wrapper {
-  position: relative;
-  text-align: center;
-}
-
-.no-image {
-  font-size: 0.9em;
-  color: #888;
-  margin-top: 8px;
-}
