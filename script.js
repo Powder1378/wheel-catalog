@@ -450,8 +450,6 @@ function applyFilters() {
 
   filterSummary.textContent = `絞り込み結果：${filtered.length} 件`;
   displayData(filtered);
-}erSummary.textContent = `絞り込み結果：${filtered.length} 件`;
-  displayData(filtered);
 }
 
 // イベント登録
