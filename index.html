@@ -33,7 +33,19 @@
         
         <label><input type="checkbox" class="source-filter" value="Vanilla" checked> Vanilla</label>
         <label><input type="checkbox" class="source-filter" value="MOD" checked> MOD</label>
-        <label><input type="checkbox" class="source-filter" value="True" checked> クロームあり</label>
+
+
+        <div id="chrome-filter-group" class="filter-buttons">
+          <input type="radio" name="chrome" id="chrome-all" class="chrome-filter" value="" checked>
+          <label for="chrome-all">すべて</label>
+
+          <input type="radio" name="chrome" id="chrome-true" class="chrome-filter" value="True">
+          <label for="chrome-true">クロームあり</label>
+
+          <input type="radio" name="chrome" id="chrome-false" class="chrome-filter" value="False">
+          <label for="chrome-false">クロームなし</label>
+        </div>
+
         
         <!-- タイプの全選択・解除ボタン -->
         <div class="filter-buttons">
