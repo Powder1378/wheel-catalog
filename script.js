@@ -141,7 +141,9 @@ function displayData(items) {
     const card = document.createElement("div");
     card.className = "wheel-card";
     card.innerHTML = `
-      <img src="${item.image}" alt="${item.name}">
+      <div class="image-wrapper">
+        <img src="${item.image}" alt="${item.name}" onerror="this.onerror=null; this.src='./images/no-image.png';">
+      </div>
       <h3>${item.name}</h3>
     `;
     container.appendChild(card);
