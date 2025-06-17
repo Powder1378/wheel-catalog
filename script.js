@@ -351,6 +351,7 @@ const container = document.getElementById("wheel-container");
 const searchInput = document.getElementById("search");
 const typeFilters = document.querySelectorAll(".type-filter");
 const sourceFilters = document.querySelectorAll(".source-filter");
+const chromeFilters = document.querySelectorAll(".chrome-filter");
 const filterSummary = document.getElementById("filter-summary");
 
 // データ表示
@@ -389,10 +390,15 @@ function applyFilters() {
     .filter(cb => cb.checked)
     .map(cb => cb.value);
 
+  const selectedSources = Array.from(chromeFilters)
+    .filter(cb => cb.checked)
+    .map(cb => cb.value);
+
   const filtered = data.filter(item => {
     const matchesName = item.name.toLowerCase().includes(keyword);
     const matchesType = selectedTypes.includes(item.type);
     const matchesSource = selectedSources.includes(item.source);
+    const matchesChrome = selectedChrome.includes(item.chrome);
     return matchesName && matchesType && matchesSource;
   });
 
@@ -404,6 +410,6 @@ function applyFilters() {
 searchInput.addEventListener("input", applyFilters);
 typeFilters.forEach(cb => cb.addEventListener("change", applyFilters));
 sourceFilters.forEach(cb => cb.addEventListener("change", applyFilters));
-
+chromeFilters.forEach(cb => cb.addEventListener("change", applyFilters));
 // 初期表示
 applyFilters();
