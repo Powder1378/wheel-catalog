@@ -448,7 +448,7 @@ function applyFilters() {
 
     const matchesType = selectedTypes.includes(item.type);
     const matchesSource = selectedSources.includes(item.source);
-    const matchesChrome = selectedChrome.length === 0 || selectedChrome.includes(item.chrome);
+    const matchesChrome = selectedChrome.includes("All") || selectedChrome.includes(item.chrome);
      
     let matchesColor = true;
     if (selectedSources.includes("MOD") && colorValue !== "all") {
