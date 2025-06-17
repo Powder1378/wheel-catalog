@@ -390,7 +390,7 @@ function applyFilters() {
     .filter(cb => cb.checked)
     .map(cb => cb.value);
 
-  const selectedSources = Array.from(chromeFilters)
+  const selectedChrome = Array.from(chromeFilters)
     .filter(cb => cb.checked)
     .map(cb => cb.value);
 
@@ -398,8 +398,8 @@ function applyFilters() {
     const matchesName = item.name.toLowerCase().includes(keyword);
     const matchesType = selectedTypes.includes(item.type);
     const matchesSource = selectedSources.includes(item.source);
-    const matchesChrome = selectedChrome.includes(item.chrome);
-    return matchesName && matchesType && matchesSource;
+    const matchesChrome = selectedChrome.length === 0 || selectedChrome.includes(item.chrome);
+    return matchesName && matchesType && matchesSource && matchesChrome;
   });
 
   filterSummary.textContent = `絞り込み結果：${filtered.length} 件`;
