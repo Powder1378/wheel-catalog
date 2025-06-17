@@ -445,10 +445,12 @@ function applyFilters() {
 
   const filtered = data.filter(item => {
     const matchesName = item.name.toLowerCase().includes(keyword);
-    const matchesType = selectedTypes.includes(item.type);
-    const matchesSource = selectedSources.includes(item.source);
+
+    // チェックがない場合はすべてOK
+    const matchesType = selectedTypes.length === 0 || selectedTypes.includes(item.type);
+    const matchesSource = selectedSources.length === 0 || selectedSources.includes(item.source);
     const matchesChrome = selectedChrome.length === 0 || selectedChrome.includes(item.chrome);
-    
+
     let matchesColor = true;
     if (selectedSources.includes("MOD") && colorValue !== "all") {
       matchesColor = item.color === colorValue;
