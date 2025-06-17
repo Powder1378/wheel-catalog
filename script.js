@@ -390,15 +390,14 @@ function applyFilters() {
     .filter(cb => cb.checked)
     .map(cb => cb.value);
 
-  const selectedChrome = Array.from(chromeFilters)
-    .filter(cb => cb.checked)
-    .map(cb => cb.value);
+  const selectedChromeRadio = document.querySelector(".chrome-filter:checked");
+  const selectedChrome = selectedChromeRadio ? selectedChromeRadio.value : "";
 
   const filtered = data.filter(item => {
     const matchesName = item.name.toLowerCase().includes(keyword);
     const matchesType = selectedTypes.includes(item.type);
     const matchesSource = selectedSources.includes(item.source);
-    const matchesChrome = selectedChrome.length === 0 || selectedChrome.includes(item.chrome);
+    const matchesChrome = !selectedChrome || item.chrome === selectedChrome;
     return matchesName && matchesType && matchesSource && matchesChrome;
   });
 
