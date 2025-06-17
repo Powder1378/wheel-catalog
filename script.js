@@ -391,21 +391,29 @@ function applyFilters() {
     .filter(cb => cb.checked)
     .map(cb => cb.value);
 
-  const selectedChromeRadio = document.querySelector(".chrome-filter:checked");
-  const selectedChrome = selectedChromeRadio ? selectedChromeRadio.value : "";
+  const selectedChrome = Array.from(chromeFilters)
+    .filter(cb => cb.checked)
+    .map(cb => cb.value);
+
+  const colorValue = document.querySelector('input[name="color"]:checked')?.value;
 
   const filtered = data.filter(item => {
     const matchesName = item.name.toLowerCase().includes(keyword);
     const matchesType = selectedTypes.includes(item.type);
     const matchesSource = selectedSources.includes(item.source);
-    const matchesChrome = !selectedChrome || item.chrome === selectedChrome;
-    return matchesName && matchesType && matchesSource && matchesChrome;
+    const matchesChrome = selectedChrome.length === 0 || selectedChrome.includes(item.chrome);
+    
+    let matchesColor = true;
+    if (selectedSources.includes("MOD") && colorValue !== "all") {
+      matchesColor = item.color === colorValue;
+    }
+
+    return matchesName && matchesType && matchesSource && matchesChrome && matchesColor;
   });
 
   filterSummary.textContent = `絞り込み結果：${filtered.length} 件`;
   displayData(filtered);
 }
-
 // イベント登録
 searchInput.addEventListener("input", applyFilters);
 typeFilters.forEach(cb => cb.addEventListener("change", applyFilters));
