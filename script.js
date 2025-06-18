@@ -481,6 +481,7 @@ sourceFilters.forEach(cb => {
 
 chromeFilters.forEach(cb => cb.addEventListener("change", applyFilters));
 
+console.log(item.name, item.color);
 
 // 初期表示
 applyFilters();
