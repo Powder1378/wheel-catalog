@@ -586,10 +586,24 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // イベント登録
-  searchInput.addEventListener("input", applyFilters);
+  searchInput.addEventListener("input", () => {
+  applyFilters();
+  checkSecretWord();
+});
+
   typeFilters.forEach(cb => cb.addEventListener("change", applyFilters));
   sourceFilters.forEach(cb => cb.addEventListener("change", applyFilters));
   chromeFilters.forEach(cb => cb.addEventListener("change", applyFilters));
+  
+// すべて選択／解除ボタン
+document.getElementById("type-all-on").addEventListener("click", () => {
+  typeFilters.forEach(cb => cb.checked = true);
+  applyFilters();
+});
+document.getElementById("type-all-off").addEventListener("click", () => {
+  typeFilters.forEach(cb => cb.checked = false);
+  applyFilters();
+});
 
   // 初期実行
   applyFilters();
