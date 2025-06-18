@@ -425,21 +425,23 @@ function displayData(items) {
   });
 }
 
-// スクロールでボタン表示制御
-window.addEventListener("scroll", () => {
-  const topButton = document.getElementById("scroll-to-top");
-  if (window.scrollY > 300) {
-    topButton.style.display = "block";
-  } else {
-    topButton.style.display = "none";
-  }
-});
 
-// ボタンをクリックしたときにページトップへスクロール
-document.getElementById("scroll-to-top").addEventListener("click", () => {
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
+// スクロールで上に戻るボタン
+document.addEventListener("DOMContentLoaded", () => {
+  const scrollButton = document.getElementById("scroll-to-top");
+
+  // スクロールイベントを監視
+  window.addEventListener("scroll", () => {
+    if (window.scrollY > 300) {
+      scrollButton.style.display = "block";  // 表示
+    } else {
+      scrollButton.style.display = "none";   // 非表示
+    }
+  });
+
+  // ボタンクリックでスクロールトップ
+  scrollButton.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
 });
 
