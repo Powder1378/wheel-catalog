@@ -483,7 +483,6 @@ const data = [
   } else {
     document.getElementById("chat-toggle").style.display = "none";
   }
-});
 
 // 開発者メッセージ候補
 const devMessages = [
