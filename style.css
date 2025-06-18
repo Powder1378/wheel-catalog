@@ -186,7 +186,7 @@ h1 {
   border-radius: 50%;
   text-align: center;
   line-height: 50px;
-  font-size: 28px;
+  font-size: 56px;
   cursor: pointer;
   box-shadow: 0 0 10px rgba(123, 77, 204, 0.8);
   display: none; /* 最初は非表示 */
