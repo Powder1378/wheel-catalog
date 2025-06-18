@@ -26,69 +26,69 @@ const data = [
   { name: "エンドーv2", image: "./images/SPT_V_24.png",type: "Sports",source: "Vanilla",chrome: "True"},
   { name: "スプリット・シックス", image: "./images/SPT_V_25.png",type: "Sports",source: "Vanilla",chrome: "True"},
   /*------------------------------------------- SportsMOD-------------------------------------------*/
-  { name: "Sports51", image: "./images/SPT_M_51.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports52", image: "./images/SPT_M_52.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports53", image: "./images/SPT_M_53.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports54", image: "./images/SPT_M_54.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports55", image: "./images/SPT_M_55.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports56", image: "./images/SPT_M_56.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports57", image: "./images/SPT_M_57.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports58", image: "./images/SPT_M_58.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports59", image: "./images/SPT_M_59.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports60", image: "./images/SPT_M_60.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports61", image: "./images/SPT_M_61.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports62", image: "./images/SPT_M_62.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports63", image: "./images/SPT_M_63.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports64", image: "./images/SPT_M_64.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports65", image: "./images/SPT_M_65.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports66", image: "./images/SPT_M_66.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports67", image: "./images/SPT_M_67.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports68", image: "./images/SPT_M_68.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports69", image: "./images/SPT_M_69.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports70", image: "./images/SPT_M_70.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports71", image: "./images/SPT_M_71.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports72", image: "./images/SPT_M_72.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports73", image: "./images/SPT_M_73.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports74", image: "./images/SPT_M_74.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports75", image: "./images/SPT_M_75.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports76", image: "./images/SPT_M_76.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports77", image: "./images/SPT_M_77.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports78", image: "./images/SPT_M_78.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports79", image: "./images/SPT_M_79.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports80", image: "./images/SPT_M_80.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports81", image: "./images/SPT_M_81.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports82", image: "./images/SPT_M_82.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports83", image: "./images/SPT_M_83.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports84", image: "./images/SPT_M_84.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports85", image: "./images/SPT_M_85.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports86", image: "./images/SPT_M_86.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports87", image: "./images/SPT_M_87.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports88", image: "./images/SPT_M_88.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports89", image: "./images/SPT_M_89.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports90", image: "./images/SPT_M_90.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports91", image: "./images/SPT_M_91.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports92", image: "./images/SPT_M_92.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports93", image: "./images/SPT_M_93.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports94", image: "./images/SPT_M_94.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports95", image: "./images/SPT_M_95.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports96", image: "./images/SPT_M_96.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports97", image: "./images/SPT_M_97.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports98", image: "./images/SPT_M_98.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports99", image: "./images/SPT_M_99.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports100", image: "./images/SPT_M_100.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports101", image: "./images/SPT_M_101.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports102", image: "./images/SPT_M_102.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports103", image: "./images/SPT_M_103.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports104", image: "./images/SPT_M_104.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports105", image: "./images/SPT_M_105.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports106", image: "./images/SPT_M_106.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports107", image: "./images/SPT_M_107.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports108", image: "./images/SPT_M_108.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports109", image: "./images/SPT_M_109.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports110", image: "./images/SPT_M_110.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports111", image: "./images/SPT_M_111.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports112", image: "./images/SPT_M_112.png", type: "Sports", source: "MOD", chrome: "False"},
-  { name: "Sports113", image: "./images/SPT_M_113.png", type: "Sports", source: "MOD", chrome: "False"},
+  { name: "Sports51", image: "./images/SPT_M_51.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports52", image: "./images/SPT_M_52.png", type: "Sports", source: "MOD", chrome: "False", color: "False"},
+  { name: "Sports53", image: "./images/SPT_M_53.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports54", image: "./images/SPT_M_54.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports55", image: "./images/SPT_M_55.png", type: "Sports", source: "MOD", chrome: "False", color: "False"},
+  { name: "Sports56", image: "./images/SPT_M_56.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports57", image: "./images/SPT_M_57.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports58", image: "./images/SPT_M_58.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports59", image: "./images/SPT_M_59.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports60", image: "./images/SPT_M_60.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports61", image: "./images/SPT_M_61.png", type: "Sports", source: "MOD", chrome: "False", color: "False"},
+  { name: "Sports62", image: "./images/SPT_M_62.png", type: "Sports", source: "MOD", chrome: "False", color: "False"},
+  { name: "Sports63", image: "./images/SPT_M_63.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports64", image: "./images/SPT_M_64.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports65", image: "./images/SPT_M_65.png", type: "Sports", source: "MOD", chrome: "False", color: "False"},
+  { name: "Sports66", image: "./images/SPT_M_66.png", type: "Sports", source: "MOD", chrome: "False", color: "False"},
+  { name: "Sports67", image: "./images/SPT_M_67.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports68", image: "./images/SPT_M_68.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports69", image: "./images/SPT_M_69.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports70", image: "./images/SPT_M_70.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports71", image: "./images/SPT_M_71.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports72", image: "./images/SPT_M_72.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports73", image: "./images/SPT_M_73.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports74", image: "./images/SPT_M_74.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports75", image: "./images/SPT_M_75.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports76", image: "./images/SPT_M_76.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports77", image: "./images/SPT_M_77.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports78", image: "./images/SPT_M_78.png", type: "Sports", source: "MOD", chrome: "False", color: "False"},
+  { name: "Sports79", image: "./images/SPT_M_79.png", type: "Sports", source: "MOD", chrome: "False", color: "False"},
+  { name: "Sports80", image: "./images/SPT_M_80.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports81", image: "./images/SPT_M_81.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports82", image: "./images/SPT_M_82.png", type: "Sports", source: "MOD", chrome: "False", color: "False"},
+  { name: "Sports83", image: "./images/SPT_M_83.png", type: "Sports", source: "MOD", chrome: "False", color: "False"},
+  { name: "Sports84", image: "./images/SPT_M_84.png", type: "Sports", source: "MOD", chrome: "False", color: "False"},
+  { name: "Sports85", image: "./images/SPT_M_85.png", type: "Sports", source: "MOD", chrome: "False", color: "False"},
+  { name: "Sports86", image: "./images/SPT_M_86.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports87", image: "./images/SPT_M_87.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports88", image: "./images/SPT_M_88.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports89", image: "./images/SPT_M_89.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports90", image: "./images/SPT_M_90.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports91", image: "./images/SPT_M_91.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports92", image: "./images/SPT_M_92.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports93", image: "./images/SPT_M_93.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports94", image: "./images/SPT_M_94.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports95", image: "./images/SPT_M_95.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports96", image: "./images/SPT_M_96.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports97", image: "./images/SPT_M_97.png", type: "Sports", source: "MOD", chrome: "False", color: "False"},
+  { name: "Sports98", image: "./images/SPT_M_98.png", type: "Sports", source: "MOD", chrome: "False", color: "False"},
+  { name: "Sports99", image: "./images/SPT_M_99.png", type: "Sports", source: "MOD", chrome: "False", color: "False"},
+  { name: "Sports100", image: "./images/SPT_M_100.png", type: "Sports", source: "MOD", chrome: "False", color: "False"},
+  { name: "Sports101", image: "./images/SPT_M_101.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports102", image: "./images/SPT_M_102.png", type: "Sports", source: "MOD", chrome: "False", color: "False"},
+  { name: "Sports103", image: "./images/SPT_M_103.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports104", image: "./images/SPT_M_104.png", type: "Sports", source: "MOD", chrome: "False", color: "False"},
+  { name: "Sports105", image: "./images/SPT_M_105.png", type: "Sports", source: "MOD", chrome: "False", color: "False"},
+  { name: "Sports106", image: "./images/SPT_M_106.png", type: "Sports", source: "MOD", chrome: "False", color: "False"},
+  { name: "Sports107", image: "./images/SPT_M_107.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports108", image: "./images/SPT_M_108.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports109", image: "./images/SPT_M_109.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports110", image: "./images/SPT_M_110.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports111", image: "./images/SPT_M_111.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
+  { name: "Sports112", image: "./images/SPT_M_112.png", type: "Sports", source: "MOD", chrome: "False", color: "False"},
+  { name: "Sports113", image: "./images/SPT_M_113.png", type: "Sports", source: "MOD", chrome: "False", color: "True"},
 
   
 
@@ -391,17 +391,6 @@ const data = [
 
 
 ];
-
-
-// 要素取得
-const container = document.getElementById("wheel-container");
-const searchInput = document.getElementById("search");
-const typeFilters = document.querySelectorAll(".type-filter");
-const sourceFilters = document.querySelectorAll(".source-filter");
-const chromeFilters = document.querySelectorAll(".chrome-filter");
-const filterSummary = document.getElementById("filter-summary");
-
-// データ表示
 function displayData(items) {
   container.innerHTML = "";
 
@@ -421,10 +410,17 @@ function displayData(items) {
       <img src="${item.image}" alt="${item.name}">
       <h3>${item.name}</h3>
     `;
+
+    // ここで「色変更可」か「色変更不可」を追加
+    if (item.type === "Sports" && item.source === "MOD") {
+      const p = document.createElement("p");
+      p.textContent = item.color === "True" ? "色変更可" : "色変更不可";
+      card.appendChild(p);
+    }
+
     container.appendChild(card);
   });
 }
-
 
 // スクロールで上に戻るボタン
 const scrollBtn = document.getElementById("scroll-to-top");
