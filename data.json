@@ -1,8 +1,0 @@
-{ 
-  "name": "インフェルノ",
-  "image": "./images/SPT_V_1.png",
-  "type": "Sports",
-  "source": "Vanilla",
-  "chrome": "True"
-  "tip": "テストプレイがばれちゃった"
-}
