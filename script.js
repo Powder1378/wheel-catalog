@@ -488,6 +488,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 // ここから隠し要素
+
+  searchInput.addEventListener("input", () => {
+  applyFilters();
   // 検索欄に「粉末ぱうだぁ」と打ち込まれたらチャットボタン表示
   if (searchInput.value.trim() === "粉末ぱうだぁ") {
     document.getElementById("chat-toggle").style.display = "block";
