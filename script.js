@@ -474,6 +474,7 @@ function applyFilters() {
 // イベント登録
 searchInput.addEventListener("input", applyFilters);
 typeFilters.forEach(cb => cb.addEventListener("change", applyFilters));
+
 sourceFilters.forEach(cb => {
   cb.addEventListener("change", () => {
     const selectedSources = Array.from(sourceFilters)
