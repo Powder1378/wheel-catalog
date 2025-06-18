@@ -519,35 +519,59 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // ホイールの表示
-  function displayData(items) {
-    container.innerHTML = "";
+function displayData(items) {
+  container.innerHTML = "";
 
-    if (items.length === 0) {
-      container.innerHTML = `
-        <div class="no-result">
-          <p>この条件のホイールは <strong>存在しません</strong></p>
-        </div>
-      `;
-      return;
+  if (items.length === 0) {
+    container.innerHTML = `
+      <div class="no-result">
+        <p>この条件に合うホイールはまだ <strong>作成中</strong> です。</p>
+      </div>
+    `;
+    return;
+  }
+
+  items.forEach(item => {
+    const cardContainer = document.createElement("div");
+    cardContainer.className = "wheel-card-container";
+
+    const card = document.createElement("div");
+    card.className = "wheel-card";
+
+    // 表面
+    const front = document.createElement("div");
+    front.className = "wheel-card-front";
+    front.innerHTML = `
+      <img src="${item.image}" alt="${item.name}">
+      <h3>${item.name}</h3>
+    `;
+    if (item.type === "Sports" && item.source === "MOD") {
+      const p = document.createElement("p");
+      p.textContent = item.color === "True" ? "色変更〇" : "色変更✖";
+      front.appendChild(p);
     }
 
-    items.forEach(item => {
-      const card = document.createElement("div");
-      card.className = "wheel-card";
-      card.innerHTML = `
-        <img src="${item.image}" alt="${item.name}">
-        <h3>${item.name}</h3>
-      `;
+    // 裏面
+    const back = document.createElement("div");
+    back.className = "wheel-card-back";
+    back.innerHTML = `
+      <p>${item.tip || "これは裏面ですが、特別な情報はありません。"}</p>
+    `;
 
-      if (item.type === "Sports" && item.source === "MOD") {
-        const p = document.createElement("p");
-        p.textContent = item.color === "True" ? "色変更〇" : "色変更✖";
-        card.appendChild(p);
-      }
+    card.appendChild(front);
+    card.appendChild(back);
+    cardContainer.appendChild(card);
 
-      container.appendChild(card);
-    });
-  }
+    // tipがある場合のみ反転可能にする
+    if (item.tip) {
+      cardContainer.addEventListener("click", () => {
+        card.classList.toggle("flipped");
+      });
+    }
+
+    container.appendChild(cardContainer);
+  });
+}
 
   // 上に戻るボタン
   const scrollBtn = document.getElementById("scroll-to-top");
