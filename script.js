@@ -555,7 +555,7 @@ function displayData(items) {
   if (items.length === 0) {
     container.innerHTML = `
       <div class="no-result">
-        <p>この条件に合うホイールはまだ <strong>作成中</strong> です。</p>
+        <p>この条件のホイールは<strong>存在しません</strong></p>
       </div>
     `;
     return;
