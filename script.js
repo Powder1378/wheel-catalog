@@ -467,6 +467,8 @@ function applyFilters() {
   displayData(filtered);
 }
 
+console.log(item.name, item.color);
+
 // イベント登録
 searchInput.addEventListener("input", applyFilters);
 typeFilters.forEach(cb => cb.addEventListener("change", applyFilters));
@@ -480,8 +482,6 @@ sourceFilters.forEach(cb => {
 });
 
 chromeFilters.forEach(cb => cb.addEventListener("change", applyFilters));
-
-console.log(item.name, item.color);
 
 // 初期表示
 applyFilters();
