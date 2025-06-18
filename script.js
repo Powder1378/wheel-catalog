@@ -463,5 +463,24 @@ sourceFilters.forEach(cb => {
     });
 });
 chromeFilters.forEach(cb => cb.addEventListener("change", applyFilters));
+
+// スクロールでボタン表示制御
+window.addEventListener("scroll", () => {
+  const topButton = document.getElementById("scroll-to-top");
+  if (window.scrollY > 300) {
+    topButton.style.display = "block";
+  } else {
+    topButton.style.display = "none";
+  }
+});
+
+// ボタンをクリックしたときにページトップへスクロール
+document.getElementById("scroll-to-top").addEventListener("click", () => {
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+});
+
 // 初期表示
 applyFilters();
