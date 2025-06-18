@@ -476,20 +476,7 @@ const data = [
 
 ];
 
-
-// 要素取得（イベント登録の前に必ず）
-const searchInput = document.getElementById("search");
-const typeFilters = document.querySelectorAll(".type-filter");
-const sourceFilters = document.querySelectorAll(".source-filter");
-const chromeFilters = document.querySelectorAll(".chrome-filter");
-const filterSummary = document.getElementById("filter-summary");
-const container = document.getElementById("wheel-container");
-
-
 // ここから隠し要素
-searchInput.addEventListener("input", () => {
-  applyFilters();
-
   // 検索欄に「粉末ぱうだぁ」と打ち込まれたらチャットボタン表示
   if (searchInput.value.trim() === "粉末ぱうだぁ") {
     document.getElementById("chat-toggle").style.display = "block";
@@ -607,11 +594,22 @@ function applyFilters() {
   displayData(filtered);
 }
 
-// イベント登録
-searchInput.addEventListener("input", applyFilters);
-typeFilters.forEach(cb => cb.addEventListener("change", applyFilters));
-sourceFilters.forEach(cb => cb.addEventListener("change", applyFilters));
-chromeFilters.forEach(cb => cb.addEventListener("change", applyFilters));
 
-// 初期表示
-applyFilters();
+
+document.addEventListener("DOMContentLoaded", () => {
+  const searchInput = document.getElementById("search");
+  const typeFilters = document.querySelectorAll(".type-filter");
+  const sourceFilters = document.querySelectorAll(".source-filter");
+  const chromeFilters = document.querySelectorAll(".chrome-filter");
+  const filterSummary = document.getElementById("filter-summary");
+  const container = document.getElementById("wheel-container");
+
+
+  // イベント登録
+  searchInput.addEventListener("input", applyFilters);
+  typeFilters.forEach(cb => cb.addEventListener("change", applyFilters));
+  sourceFilters.forEach(cb => cb.addEventListener("change", applyFilters));
+  chromeFilters.forEach(cb => cb.addEventListener("change", applyFilters));
+
+  applyFilters();
+});
