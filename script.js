@@ -477,7 +477,6 @@ const data = [
 ];
 
 
-
 document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById("search");
   const typeFilters = document.querySelectorAll(".type-filter");
@@ -485,128 +484,106 @@ document.addEventListener("DOMContentLoaded", () => {
   const chromeFilters = document.querySelectorAll(".chrome-filter");
   const filterSummary = document.getElementById("filter-summary");
   const container = document.getElementById("wheel-container");
-
-
-// ここから隠し要素
-
-  searchInput.addEventListener("input", () => {
-  applyFilters();
-  // 検索欄に「粉末ぱうだぁ」と打ち込まれたらチャットボタン表示
-  if (searchInput.value.trim() === "粉末ぱうだぁ") {
-    document.getElementById("chat-toggle").style.display = "block";
-  } else {
-    document.getElementById("chat-toggle").style.display = "none";
-  }
-
-// 開発者メッセージ候補
-const devMessages = [
-  "ぱうだぁ: よく見つけたね！",
-  "ぱうだぁ: このカタログにたくさんの隠し要素を入れたよ！",
-  "ぱうだぁ: 君は暇なの？",
-  "ぱうだぁ: コナミコマンドって知ってる？",
-  "ぱうだぁ: 一部のホイールはクリックすると...？",
-  "ぱうだぁ: 実はチャットを開くたびにメッセージが変わるよ！",
-  "ぱうだぁ: だいぶネタ切れだよ",
-  "ぱうだぁ: ぬるぽ"
-];
-
-// チャットボタンのクリックでチャットウィンドウ開閉＋ランダム表示
-document.getElementById("chat-toggle").addEventListener("click", () => {
+  const chatToggleBtn = document.getElementById("chat-toggle");
   const chatWindow = document.getElementById("chat-window");
   const chatContent = document.getElementById("chat-content");
 
-  // ランダムなメッセージを取得
-  const randomMessage = devMessages[Math.floor(Math.random() * devMessages.length)];
+  const devMessages = [
+    "ぱうだぁ: よく見つけたね！",
+    "ぱうだぁ: このカタログにたくさんの隠し要素を入れたよ！",
+    "ぱうだぁ: 君は暇なの？",
+    "ぱうだぁ: コナミコマンドって知ってる？",
+    "ぱうだぁ: 一部のホイールはクリックすると...？",
+    "ぱうだぁ: 実はチャットを開くたびにメッセージが変わるよ！",
+    "ぱうだぁ: だいぶネタ切れだよ",
+    "ぱうだぁ: ぬるぽ"
+  ];
 
-  // 表示中メッセージを更新（履歴を残したければ+=に変更）
-  chatContent.innerHTML = `<p>${randomMessage}</p>`;
-
-  // 表示/非表示切り替え
-  chatWindow.style.display = chatWindow.style.display === "none" ? "block" : "none";
-});
-
-// ここまで隠し要素
-
-// 絞り込み
-function displayData(items) {
-  container.innerHTML = "";
-
-  if (items.length === 0) {
-    container.innerHTML = `
-      <div class="no-result">
-        <p>この条件に合うホイールはまだ <strong>作成中</strong> です。</p>
-      </div>
-    `;
-    return;
+  // チャットボタンの表示判定
+  function checkSecretWord() {
+    if (searchInput.value.trim() === "粉末ぱうだぁ") {
+      chatToggleBtn.style.display = "block";
+    } else {
+      chatToggleBtn.style.display = "none";
+    }
   }
 
-  items.forEach(item => {
-    const card = document.createElement("div");
-    card.className = "wheel-card";
-    card.innerHTML = `
-      <img src="${item.image}" alt="${item.name}">
-      <h3>${item.name}</h3>
-    `;
+  // チャットボタンの開閉イベント
+  chatToggleBtn.addEventListener("click", () => {
+    const randomMessage = devMessages[Math.floor(Math.random() * devMessages.length)];
+    chatContent.innerHTML = `<p>${randomMessage}</p>`;
+    chatWindow.style.display = chatWindow.style.display === "none" ? "block" : "none";
+  });
 
-    // ここで「色変更可」か「色変更不可」を追加
-    if (item.type === "Sports" && item.source === "MOD") {
-      const p = document.createElement("p");
-      p.textContent = item.color === "True" ? "色変更〇" : "色変更✖";
-      card.appendChild(p);
+  // ホイールの表示
+  function displayData(items) {
+    container.innerHTML = "";
+
+    if (items.length === 0) {
+      container.innerHTML = `
+        <div class="no-result">
+          <p>この条件に合うホイールはまだ <strong>作成中</strong> です。</p>
+        </div>
+      `;
+      return;
     }
 
-    container.appendChild(card);
-  });
-}
+    items.forEach(item => {
+      const card = document.createElement("div");
+      card.className = "wheel-card";
+      card.innerHTML = `
+        <img src="${item.image}" alt="${item.name}">
+        <h3>${item.name}</h3>
+      `;
 
-// スクロールで上に戻るボタン
-const scrollBtn = document.getElementById("scroll-to-top");
+      if (item.type === "Sports" && item.source === "MOD") {
+        const p = document.createElement("p");
+        p.textContent = item.color === "True" ? "色変更〇" : "色変更✖";
+        card.appendChild(p);
+      }
 
-// スクロールイベントで表示・非表示切替
-window.addEventListener("scroll", () => {
-  if (window.scrollY > 100) {  // 100px以上スクロールしたら表示
-    scrollBtn.style.display = "block";
-  } else {
-    scrollBtn.style.display = "none";
+      container.appendChild(card);
+    });
   }
-});
 
-// ボタンクリックでトップへスムーズスクロール
-scrollBtn.addEventListener("click", () => {
-  window.scrollTo({ top: 0, behavior: "smooth" });
-});
+  // 上に戻るボタン
+  const scrollBtn = document.getElementById("scroll-to-top");
 
-
-// フィルター適用
-function applyFilters() {
-  const keyword = searchInput.value.toLowerCase();
-
-  const selectedTypes = Array.from(typeFilters)
-    .filter(cb => cb.checked)
-    .map(cb => cb.value);
-
-  const selectedSources = Array.from(sourceFilters)
-    .filter(cb => cb.checked)
-    .map(cb => cb.value);
-
-  const selectedChrome = document.querySelector('input[name="chrome"]:checked')?.value || "All";
-
-  const filtered = data.filter(item => {
-    const matchesName = item.name.toLowerCase().includes(keyword);
-    const matchesType = selectedTypes.includes(item.type);
-    const matchesSource = selectedSources.includes(item.source);
-    const matchesChrome = selectedChrome === "All" || item.chrome === selectedChrome;
-
-    return matchesName && matchesType && matchesSource && matchesChrome;
+  window.addEventListener("scroll", () => {
+    scrollBtn.style.display = window.scrollY > 100 ? "block" : "none";
   });
 
-  // ここでfilteredの中身を確認できます
-  filtered.forEach(item => console.log(item.name, item.color));
+  scrollBtn.addEventListener("click", () => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  });
 
-  filterSummary.textContent = `絞り込み結果：${filtered.length} 件`;
-  displayData(filtered);
-}
+  // フィルター適用
+  function applyFilters() {
+    const keyword = searchInput.value.toLowerCase();
 
+    const selectedTypes = Array.from(typeFilters)
+      .filter(cb => cb.checked)
+      .map(cb => cb.value);
+
+    const selectedSources = Array.from(sourceFilters)
+      .filter(cb => cb.checked)
+      .map(cb => cb.value);
+
+    const selectedChrome = document.querySelector('input[name="chrome"]:checked')?.value || "All";
+
+    const filtered = data.filter(item => {
+      const matchesName = item.name.toLowerCase().includes(keyword);
+      const matchesType = selectedTypes.includes(item.type);
+      const matchesSource = selectedSources.includes(item.source);
+      const matchesChrome = selectedChrome === "All" || item.chrome === selectedChrome;
+
+      return matchesName && matchesType && matchesSource && matchesChrome;
+    });
+
+    filterSummary.textContent = `絞り込み結果：${filtered.length} 件`;
+    displayData(filtered);
+    checkSecretWord(); // ←ここで検索語をチェック
+  }
 
   // イベント登録
   searchInput.addEventListener("input", applyFilters);
@@ -614,5 +591,6 @@ function applyFilters() {
   sourceFilters.forEach(cb => cb.addEventListener("change", applyFilters));
   chromeFilters.forEach(cb => cb.addEventListener("change", applyFilters));
 
+  // 初期実行
   applyFilters();
 });
