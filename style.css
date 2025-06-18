@@ -174,27 +174,22 @@ h1 {
   border-color: #7e57c2;
 }
 
-.scroll-top-button {
+
+#scroll-to-top {
   position: fixed;
-  bottom: 30px;
-  right: 30px;
+  bottom: 20px;
+  right: 20px;
   width: 50px;
   height: 50px;
-  background-color: #8e44ad; /* 紫系 */
+  background-color: #7b4dcc; /* 紫系 */
   color: white;
-  border: none;
-  border-radius: 50%; /* 丸くする */
-  cursor: pointer;
-  display: none; /* 初期は非表示 */
-  z-index: 1000;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
-  font-size: 18px;
-  font-weight: bold;
-  transition: background-color 0.3s ease, opacity 0.3s ease;
+  border-radius: 50%;
   text-align: center;
-  line-height: 50px; /* 中央に文字を配置 */
-}
-
-.scroll-top-button:hover {
-  background-color: #732d91; /* ホバー時の濃い紫 */
+  line-height: 50px;
+  font-size: 28px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(123, 77, 204, 0.8);
+  display: none; /* 最初は非表示 */
+  z-index: 10000;
+  border: none;
 }
