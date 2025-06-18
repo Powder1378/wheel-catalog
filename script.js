@@ -393,6 +393,14 @@ const data = [
 ];
 
 
+// 要素取得（イベント登録の前に必ず）
+const searchInput = document.getElementById("search");
+const typeFilters = document.querySelectorAll(".type-filter");
+const sourceFilters = document.querySelectorAll(".source-filter");
+const chromeFilters = document.querySelectorAll(".chrome-filter");
+
+
+// 絞り込み
 function displayData(items) {
   container.innerHTML = "";
 
