@@ -486,6 +486,47 @@ const filterSummary = document.getElementById("filter-summary");
 const container = document.getElementById("wheel-container");
 
 
+// ここから隠し要素
+searchInput.addEventListener("input", () => {
+  applyFilters();
+
+  // 検索欄に「粉末ぱうだぁ」と打ち込まれたらチャットボタン表示
+  if (searchInput.value.trim() === "粉末ぱうだぁ") {
+    document.getElementById("chat-toggle").style.display = "block";
+  } else {
+    document.getElementById("chat-toggle").style.display = "none";
+  }
+});
+
+// 開発者メッセージ候補
+const devMessages = [
+  "ぱうだぁ: よく見つけたね！",
+  "ぱうだぁ: このカタログにたくさんの隠し要素を入れたよ！",
+  "ぱうだぁ: 君は暇なの？",
+  "ぱうだぁ: コナミコマンドって知ってる？",
+  "ぱうだぁ: 一部のホイールはクリックすると...？",
+  "ぱうだぁ: 実はチャットを開くたびにメッセージが変わるよ！",
+  "ぱうだぁ: だいぶネタ切れだよ",
+  "ぱうだぁ: ぬるぽ"
+];
+
+// チャットボタンのクリックでチャットウィンドウ開閉＋ランダム表示
+document.getElementById("chat-toggle").addEventListener("click", () => {
+  const chatWindow = document.getElementById("chat-window");
+  const chatContent = document.getElementById("chat-content");
+
+  // ランダムなメッセージを取得
+  const randomMessage = devMessages[Math.floor(Math.random() * devMessages.length)];
+
+  // 表示中メッセージを更新（履歴を残したければ+=に変更）
+  chatContent.innerHTML = `<p>${randomMessage}</p>`;
+
+  // 表示/非表示切り替え
+  chatWindow.style.display = chatWindow.style.display === "none" ? "block" : "none";
+});
+
+// ここまで隠し要素
+
 // 絞り込み
 function displayData(items) {
   container.innerHTML = "";
