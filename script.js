@@ -470,7 +470,31 @@ const data = [
   { name: "ウェブズ", image: "./images/BKE_V_33.png", type: "Bike", source: "Vanilla",chrome: "True" },
   { name: "ホットプレート", image: "./images/BKE_V_34.png", type: "Bike", source: "Vanilla",chrome: "True" },
   { name: "ボブスタ", image: "./images/BKE_V_35.png", type: "Bike", source: "Vanilla",chrome: "True" },
-  { name: "グラウチ", image: "./images/BKE_V_36.png", type: "Bike", source: "Vanilla",chrome: "True" }
+  { name: "グラウチ", image: "./images/BKE_V_36.png", type: "Bike", source: "Vanilla",chrome: "True" },
+
+
+  // Dragster
+  { name: "レトロファイブ", image: "./images/DRS_V_1.png", type: "Dragster", source: "Vanilla", chrome: "False"},
+  { name: "レトロファイブ（ストライプ）", image: "./images/DRS_V_2.png", type: "Dragster", source: "Vanilla", chrome: "False"},
+  { name: "レトロ スター", image: "./images/DRS_V_3.png", type: "Dragster", source: "Vanilla", chrome: "False"},
+  { name: "レトロ スター（ストライプ）", image: "./images/DRS_V_4.png", type: "Dragster", source: "Vanilla", chrome: "False"},
+  { name: "トリプレックス", image: "./images/DRS_V_5.png", type: "Dragster", source: "Vanilla", chrome: "False"},
+  { name: "トリプレックス（ストライプ）", image: "./images/DRS_V_6.png", type: "Dragster", source: "Vanilla", chrome: "False"},
+  { name: "70年代スペック", image: "./images/DRS_V_7.png", type: "Dragster", source: "Vanilla", chrome: "False"},
+  { name: "70年代 スペック（ストライプ）", image: "./images/DRS_V_8.png", type: "Dragster", source: "Vanilla", chrome: "False"},
+  { name: "スーパー ファイブ アール", image: "./images/DRS_V_9.png", type: "Dragster", source: "Vanilla", chrome: "False"},
+  { name: "スーパー ファイブ アール（ストライプ）", image: "./images/DRS_V_10.png", type: "Dragster", source: "Vanilla", chrome: "False"},
+  { name: "スピードスター", image: "./images/DRS_V_11.png", type: "Dragster", source: "Vanilla", chrome: "False"},
+  { name: "スピードスター（ストライプ）", image: "./images/DRS_V_12.png", type: "Dragster", source: "Vanilla", chrome: "False"},
+  { name: "GP-90", image: "./images/DRS_V_13.png", type: "Dragster", source: "Vanilla", chrome: "False"},
+  { name: "GP-90（ストライプ）", image: "./images/DRS_V_14.png", type: "Dragster", source: "Vanilla", chrome: "False"},
+  { name: "スーパー スポーク", image: "./images/DRS_V_15.png", type: "Dragster", source: "Vanilla", chrome: "False"},
+  { name: "スーパー スポーク（ストライプ）", image: "./images/DRS_V_16.png", type: "Dragster", source: "Vanilla", chrome: "False"},
+  { name: "グリッドライン", image: "./images/DRS_V_17.png", type: "Dragster", source: "Vanilla", chrome: "False"},
+  { name: "グリッドライン（ストライプ）", image: "./images/DRS_V_18.png", type: "Dragster", source: "Vanilla", chrome: "False"},
+  { name: "スノーフレーク", image: "./images/DRS_V_19.png", type: "Dragster", source: "Vanilla", chrome: "False"},
+  { name: "スノーフレーク（ストライプ）", image: "./images/DRS_V_20.png", type: "Dragster", source: "Vanilla", chrome: "False"}
+
 
 
 
