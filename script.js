@@ -426,7 +426,7 @@ function displayData(items) {
     // ここで「色変更可」か「色変更不可」を追加
     if (item.type === "Sports" && item.source === "MOD") {
       const p = document.createElement("p");
-      p.textContent = item.color === "True" ? "色変更可" : "色変更不可";
+      p.textContent = item.color === "True" ? "色変更〇" : "色変更✖";
       card.appendChild(p);
     }
 
