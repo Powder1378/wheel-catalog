@@ -391,6 +391,8 @@ const data = [
 
 
 ];
+
+
 function displayData(items) {
   container.innerHTML = "";
 
@@ -463,11 +465,12 @@ function applyFilters() {
     return matchesName && matchesType && matchesSource && matchesChrome;
   });
 
+  // ここでfilteredの中身を確認できます
+  filtered.forEach(item => console.log(item.name, item.color));
+
   filterSummary.textContent = `絞り込み結果：${filtered.length} 件`;
   displayData(filtered);
 }
-
-console.log(item.name, item.color);
 
 // イベント登録
 searchInput.addEventListener("input", applyFilters);
