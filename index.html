@@ -34,7 +34,6 @@
         <label><input type="checkbox" class="source-filter" value="Vanilla" checked> Vanilla</label>
         <label><input type="checkbox" class="source-filter" value="MOD" checked> MOD</label>
 
-
         <div id="chrome-filter-group" class="chrome-filter-buttons">
           <input type="radio" name="chrome" id="chrome-all" class="chrome-filter" value="All" checked>
           <label for="chrome-all">すべて</label>
@@ -43,7 +42,6 @@
           <label for="chrome-true">クロームあり</label>
         </div>
 
-        
         <!-- タイプの全選択・解除ボタン -->
         <div class="filter-buttons">
           <button type="button" id="type-all-on">すべて選択</button>
@@ -52,6 +50,12 @@
       </div>
 
       <input type="text" id="search" placeholder="名前で検索">
+
+      <!-- ここにチャット開閉ボタンを追加 -->
+      <button id="chat-toggle" style="display:none; margin-top: 10px;">
+        チャットを開く
+      </button>
+
       <p id="filter-summary">絞り込み結果：すべて表示</p>
     </div>
   </header>
@@ -60,29 +64,27 @@
     <div id="wheel-container"></div>
   </main>
 
-
   <!-- チャットウィンドウ -->
-<div id="chat-window" style="
-  display: none;
-  position: fixed;
-  bottom: 80px;
-  right: 20px;
-  width: 300px;
-  max-height: 400px;
-  background-color: #1e1e1e;
-  color: white;
-  border-radius: 10px;
-  padding: 15px;
-  font-family: monospace;
-  font-size: 14px;
-  overflow-y: auto;
-  z-index: 1000;
-  box-shadow: 0 0 10px rgba(0,0,0,0.5);
-">
-  <div id="chat-content"></div>
-</div>
+  <div id="chat-window" style="
+    display: none;
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    width: 300px;
+    max-height: 400px;
+    background-color: #1e1e1e;
+    color: white;
+    border-radius: 10px;
+    padding: 15px;
+    font-family: monospace;
+    font-size: 14px;
+    overflow-y: auto;
+    z-index: 1000;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+  ">
+    <div id="chat-content"></div>
+  </div>
 
-  
   <footer class="site-footer">
     <h2>お問い合わせ</h2>
     <p><strong>FlecityName:</strong> 粉末 ぱうだぁ</p>
@@ -106,7 +108,8 @@
       });
     });
   </script>
+
   <button id="scroll-to-top" style="display: none;">⇪</button>
-<script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
