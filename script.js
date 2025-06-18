@@ -500,6 +500,13 @@ document.addEventListener("DOMContentLoaded", () => {
     "ぱうだぁ: ここに私の名前を入れるってことは、よっぽど私のことが好きなんだね",
     "ぱうだぁ: おすすめのお酒ある？ビールと焼酎とウイスキー以外で！！",
     "ぱうだぁ: 私がこの街に来たのは2023年の7月20日だよ！......あれ、ちがったかも",
+    "ぱうだぁ: ヒドゥンシックスっていうホイールが......",
+    "ぱうだぁ: 暇つぶしで来てくれても歓迎するよ",
+    "ぱうだぁ: お問い合わせフォームのその他に、ロスカスでやってほしいイベントとか募集中！！",
+    "ぱうだぁ: ここだけの話、ぱうだぁーでも、ぱうだーでもなくて、ぱうだぁなんだ。細かいね",
+    "???????: ﾎｹﾞﾎｹﾞﾎｹﾞﾎｹﾞwwwww",
+    "ぱうだぁ: かため濃いめ多めでニンニクマシマシ！！！着丼したらすぐに海苔にアブラを吸わせて......おなかすいたな",
+    "ぱうだぁ: たくさん歩いた後のキンキンに冷えた酒がうまいや！！",
   ];
 
   // チャットボタンの表示判定
@@ -518,7 +525,6 @@ document.addEventListener("DOMContentLoaded", () => {
     chatWindow.style.display = chatWindow.style.display === "none" ? "block" : "none";
   });
 
-  // ホイールの表示
 function displayData(items) {
   container.innerHTML = "";
 
@@ -532,44 +538,21 @@ function displayData(items) {
   }
 
   items.forEach(item => {
-    const cardContainer = document.createElement("div");
-    cardContainer.className = "wheel-card-container";
-
     const card = document.createElement("div");
     card.className = "wheel-card";
-
-    // 表面
-    const front = document.createElement("div");
-    front.className = "wheel-card-front";
-    front.innerHTML = `
+    card.innerHTML = `
       <img src="${item.image}" alt="${item.name}">
       <h3>${item.name}</h3>
     `;
+
+    // Sports + MOD のときだけ「色変更〇/✖」表示
     if (item.type === "Sports" && item.source === "MOD") {
       const p = document.createElement("p");
       p.textContent = item.color === "True" ? "色変更〇" : "色変更✖";
-      front.appendChild(p);
+      card.appendChild(p);
     }
 
-    // 裏面
-    const back = document.createElement("div");
-    back.className = "wheel-card-back";
-    back.innerHTML = `
-      <p>${item.tip || "これは裏面ですが、特別な情報はありません。"}</p>
-    `;
-
-    card.appendChild(front);
-    card.appendChild(back);
-    cardContainer.appendChild(card);
-
-    // tipがある場合のみ反転可能にする
-    if (item.tip) {
-      cardContainer.addEventListener("click", () => {
-        card.classList.toggle("flipped");
-      });
-    }
-
-    container.appendChild(cardContainer);
+    container.appendChild(card);
   });
 }
 
