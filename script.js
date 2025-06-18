@@ -427,22 +427,20 @@ function displayData(items) {
 
 
 // スクロールで上に戻るボタン
-document.addEventListener("DOMContentLoaded", () => {
-  const scrollButton = document.getElementById("scroll-to-top");
+const scrollBtn = document.getElementById("scroll-to-top");
 
-  // スクロールイベントを監視
-  window.addEventListener("scroll", () => {
-    if (window.scrollY > 300) {
-      scrollButton.style.display = "block";  // 表示
-    } else {
-      scrollButton.style.display = "none";   // 非表示
-    }
-  });
+// スクロールイベントで表示・非表示切替
+window.addEventListener("scroll", () => {
+  if (window.scrollY > 100) {  // 100px以上スクロールしたら表示
+    scrollBtn.style.display = "block";
+  } else {
+    scrollBtn.style.display = "none";
+  }
+});
 
-  // ボタンクリックでスクロールトップ
-  scrollButton.addEventListener("click", () => {
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
+// ボタンクリックでトップへスムーズスクロール
+scrollBtn.addEventListener("click", () => {
+  window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
 
