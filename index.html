@@ -92,23 +92,6 @@
     <p><strong>Address:</strong> 529 LosSantosCustom</p>
   </footer>
 
-  <!-- チェックボックスの一括操作スクリプト -->
-  <script>
-    document.addEventListener("DOMContentLoaded", () => {
-      const typeFilters = document.querySelectorAll(".type-filter");
-
-      document.getElementById("type-all-on").addEventListener("click", () => {
-        typeFilters.forEach(cb => cb.checked = true);
-        applyFilters();
-      });
-
-      document.getElementById("type-all-off").addEventListener("click", () => {
-        typeFilters.forEach(cb => cb.checked = false);
-        applyFilters();
-      });
-    });
-  </script>
-
   <button id="scroll-to-top" style="display: none;">⇪</button>
   <script src="script.js"></script>
 </body>
