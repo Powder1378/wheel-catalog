@@ -476,6 +476,17 @@ const data = [
 
 ];
 
+
+
+document.addEventListener("DOMContentLoaded", () => {
+  const searchInput = document.getElementById("search");
+  const typeFilters = document.querySelectorAll(".type-filter");
+  const sourceFilters = document.querySelectorAll(".source-filter");
+  const chromeFilters = document.querySelectorAll(".chrome-filter");
+  const filterSummary = document.getElementById("filter-summary");
+  const container = document.getElementById("wheel-container");
+
+
 // ここから隠し要素
   // 検索欄に「粉末ぱうだぁ」と打ち込まれたらチャットボタン表示
   if (searchInput.value.trim() === "粉末ぱうだぁ") {
@@ -592,16 +603,6 @@ function applyFilters() {
   filterSummary.textContent = `絞り込み結果：${filtered.length} 件`;
   displayData(filtered);
 }
-
-
-
-document.addEventListener("DOMContentLoaded", () => {
-  const searchInput = document.getElementById("search");
-  const typeFilters = document.querySelectorAll(".type-filter");
-  const sourceFilters = document.querySelectorAll(".source-filter");
-  const chromeFilters = document.querySelectorAll(".chrome-filter");
-  const filterSummary = document.getElementById("filter-summary");
-  const container = document.getElementById("wheel-container");
 
 
   // イベント登録
