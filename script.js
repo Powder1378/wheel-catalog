@@ -399,6 +399,8 @@ const typeFilters = document.querySelectorAll(".type-filter");
 const sourceFilters = document.querySelectorAll(".source-filter");
 const chromeFilters = document.querySelectorAll(".chrome-filter");
 const filterSummary = document.getElementById("filter-summary");
+const container = document.getElementById("wheel-container");
+
 
 // 絞り込み
 function displayData(items) {
