@@ -91,63 +91,6 @@
     <p><strong>Form:</strong> <a href="https://forms.gle/HkCUNoGDMVmGTVwe9">お問い合わせフォーム</a></p>
     <p><strong>Address:</strong> 529 LosSantosCustom</p>
   </footer>
-
-  .wheel-card-container {
-  perspective: 1000px;
-  display: inline-block;
-  margin: 10px;
-}
-
-.wheel-card {
-  width: 200px;
-  height: 250px;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.6s;
-}
-
-.wheel-card.flipped {
-  transform: rotateY(180deg);
-}
-
-.wheel-card-front,
-.wheel-card-back {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-.wheel-card-front {
-  background: #fff;
-  z-index: 2;
-}
-
-.wheel-card-back {
-  background: #222;
-  color: white;
-  transform: rotateY(180deg);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-}
-
-  .wheel-card-container.has-tip {
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-  border-radius: 12px;
-}
-
-/* hover時に光る */
-.wheel-card-container.has-tip:hover {
-  box-shadow: 0 0 12px rgba(0, 255, 255, 0.7), 0 0 20px rgba(0, 255, 255, 0.5);
-  transform: scale(1.03);
-}
   
   <button id="scroll-to-top" style="display: none;">⇪</button>
   <script src="script.js"></script>
