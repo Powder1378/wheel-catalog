@@ -508,6 +508,7 @@ const data = [
 
 ];
 
+// この下はいじらないようにしてください
 
 document.addEventListener("DOMContentLoaded", () => {
   const searchInput = document.getElementById("search");
@@ -650,3 +651,4 @@ document.getElementById("type-all-off").addEventListener("click", () => {
   // 初期実行
   applyFilters();
 });
+
